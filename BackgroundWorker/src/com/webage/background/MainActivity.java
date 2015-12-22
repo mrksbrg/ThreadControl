@@ -5,6 +5,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * Example using ThreadControl.
+ * /
 public class MainActivity extends Activity {
 	TextView numberTxt;
 	ThreadControl tControl = new ThreadControl();
@@ -71,7 +74,6 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
 		tControl.resume();
 	}
 }

@@ -22,7 +22,6 @@ import android.util.Log;
  */
 public class ThreadControl {
 	private final Lock lock = new ReentrantLock();
-
 	private Condition pauseCondition = lock.newCondition();
 	private boolean paused = false, cancelled = false;
 	
@@ -32,10 +31,8 @@ public class ThreadControl {
 	 */
 	public void pause() {
 		lock.lock();
-		
 		Log.v("ThreadControl", "Pausing");
 		paused = true;
-		
 		lock.unlock();
 	}
 	/**
@@ -86,7 +83,6 @@ public class ThreadControl {
 	 */
 	public void waitIfPaused() throws InterruptedException {
 		lock.lock();
-		
 		try {
 			while (paused && !cancelled) {
 					Log.v("ThreadControl", "Going to wait");

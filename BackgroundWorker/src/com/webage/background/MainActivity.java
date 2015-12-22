@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 /**
  * Example using ThreadControl.
- * /
+ */
 public class MainActivity extends Activity {
 	TextView numberTxt;
 	ThreadControl tControl = new ThreadControl();
